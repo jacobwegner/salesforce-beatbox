@@ -138,9 +138,9 @@ class Client(BaseClient):
         for r in res:
             d = dict()
             d['activateable'] = _bool(r[_tPartnerNS.activateable])
-            rawreldata = r[_tPartnerNS.ChildRelationships:]
+            rawreldata = r[_tPartnerNS.childRelationships:]
             relinfo = [_extractChildRelInfo(cr) for cr in rawreldata]
-            d['ChildRelationships'] = relinfo
+            d['childRelationships'] = relinfo
             d['createable'] = _bool(r[_tPartnerNS.createable])
             d['custom'] = _bool(r[_tPartnerNS.custom])
             try:
