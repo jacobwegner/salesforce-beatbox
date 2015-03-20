@@ -1,3 +1,12 @@
+Mirror
+======
+This is a mirror of the `salesforce-beatbox <https://code.google.com/p/salesforce-beatbox/>`_ on Google Code.
+
+`Google Code <http://google-opensource.blogspot.com/2015/03/farewell-to-google-code.html>`_ is going away, and I wanted to have a mirror of the SVN project somewhere.
+
+The `PyPi package <https://pypi.python.org/pypi/beatbox/32.1>`_ is several versions ahead of the source in this repo.
+
+
 Introduction
 ============
 
