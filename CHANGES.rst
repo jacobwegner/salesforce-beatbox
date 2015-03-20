@@ -1,9 +1,23 @@
 Changelog
 =========
 
-10.1 (unreleased)
+32.1 (2014-12-04)
 -----------------
 
+* Fix bug in convertLead when passed a single object instead of a list.
+  [davisagli]
+
+32.0 (2014-12-01)
+-----------------
+
+* Add support for the convertLead call.
+  [davisagli]
+
+* Update to use version 32.0 of the Salesforce.com partner WSDL by default.
+  [davisagli]
+
+* Don't use _out internal method from XMLGenerator.
+  [smcmahon]
 
 20.0 (2010-11-30)
 -----------------

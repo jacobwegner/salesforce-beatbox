@@ -28,24 +28,24 @@ This module contains 2 versions of the Salesforce.com client:
 Compatibility
 =============
 
-Beatbox supports versions 16.0 through 20.0 of the Salesforce Partner Web
+Beatbox supports versions 16.0 through 32.0 of the Salesforce Partner Web
 Services API. However, the following API calls have not been implemented at
 this time:
 
- * convertLead
  * emptyRecycleBin
+ * executeListView
  * invalidateSessions
  * logout
  * merge
+ * performQuickActions
  * process
  * queryAll
  * undelete
  * describeSObject
  * sendEmail
- * describeDataCategoryGroups
- * describeDataCategoryGroupStructures
+ * all describe* calls except describeGlobal, describeSObjects, and describeTabs
 
-Beatbox has been tested with Python 2.4 and Python 2.6.
+Beatbox has been tested with Python 2.7.
 
 
 Basic Usage Examples
@@ -72,6 +72,15 @@ Get the ID of the newly created Lead:
   >>> res[0]['id']
   '00Q7000000RVyiHEAT'
 
+Convert a Lead:
+  >>> res = svc.convertLead({
+  ...     'leadId': '00Q7000000RVyiHEAT',
+  ...     'convertedStatus': 'Closed - Converted',
+  ... })
+Get the ID of the new Contact:
+  >>> str(res[0]['contactId'])
+  '0037000000TEGrsAAH'
+
 
 More Examples
 =============
@@ -96,6 +105,10 @@ provide example of use:
 
 Alternatives
 ============
+
+`simple-salesforce`_ is recommended as a client for the Salesforce.com REST API.
+
+.. _`simple-salesforce`: https://pypi.python.org/pypi/simple-salesforce
 
 David Lanstein has created a `Python Salesforce Toolkit`_ that is based on the
 `suds`_ SOAP library.  Based on limited tests it appears to be somewhat slower
